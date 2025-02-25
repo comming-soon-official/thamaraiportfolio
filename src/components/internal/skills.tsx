@@ -8,40 +8,44 @@ import Meteors from '../ui/meteors'
 
 const skillsData = [
     {
-        category: 'Design',
+        category: 'Design Software',
         icon: <Palette className="w-6 h-6" />,
         skills: [
             {
-                name: 'UI/UX Design',
+                name: 'Adobe Photoshop',
                 level: 95,
-                color: 'from-purple-500 to-pink-500'
-            },
-            {
-                name: 'Adobe Creative Suite',
-                level: 90,
                 color: 'from-blue-500 to-cyan-500'
             },
-            { name: 'Figma', level: 92, color: 'from-green-500 to-emerald-500' }
+            {
+                name: 'Adobe Illustrator',
+                level: 92,
+                color: 'from-orange-500 to-red-500'
+            },
+            {
+                name: 'Adobe InDesign',
+                level: 88,
+                color: 'from-purple-500 to-pink-500'
+            }
         ]
     },
     {
-        category: 'Illustration',
+        category: 'Design Skills',
         icon: <Pencil className="w-6 h-6" />,
         skills: [
             {
-                name: 'Digital Art',
+                name: 'Typography & Layout',
+                level: 90,
+                color: 'from-emerald-500 to-green-500'
+            },
+            {
+                name: 'Brand Identity Design',
                 level: 88,
-                color: 'from-orange-500 to-yellow-500'
+                color: 'from-violet-500 to-indigo-500'
             },
             {
-                name: 'Vector Graphics',
+                name: 'Print & Digital Design',
                 level: 85,
-                color: 'from-red-500 to-rose-500'
-            },
-            {
-                name: 'Character Design',
-                level: 82,
-                color: 'from-violet-500 to-purple-500'
+                color: 'from-yellow-500 to-amber-500'
             }
         ]
     }
@@ -50,26 +54,26 @@ const skillsData = [
 const specialities = [
     {
         icon: <Shapes className="w-8 h-8" />,
-        title: 'Visual Design',
-        description: 'Creating stunning visual experiences',
+        title: 'Brand Identity',
+        description: 'Crafting unique visual brand experiences',
         gradient: 'from-purple-500/20 to-pink-500/20'
     },
     {
         icon: <Brain className="w-8 h-8" />,
-        title: 'Design Thinking',
-        description: 'User-centered problem solving',
+        title: 'Print Design',
+        description: 'Creating impactful print materials',
         gradient: 'from-blue-500/20 to-cyan-500/20'
     },
     {
         icon: <Lightbulb className="w-8 h-8" />,
-        title: 'Creative Direction',
-        description: 'Leading design strategy and vision',
+        title: 'Digital Design',
+        description: 'Responsive web & mobile design',
         gradient: 'from-orange-500/20 to-yellow-500/20'
     },
     {
         icon: <Code className="w-8 h-8" />,
-        title: 'Prototyping',
-        description: 'Building interactive experiences',
+        title: 'Motion Design',
+        description: 'Engaging animated graphics',
         gradient: 'from-green-500/20 to-emerald-500/20'
     }
 ]

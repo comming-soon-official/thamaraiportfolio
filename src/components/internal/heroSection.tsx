@@ -70,9 +70,8 @@ export default function Hero() {
                             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-7xl">
                                 <SparklesText text="Hello" />
                                 <span className="relative inline-block">
-                                    I'm
-                                    <span className="typing-effect gradient-text">
-                                        {' '}
+                                    <span className="Pacifico">I'm </span>
+                                    <span className="typing-effect gradient-text Pacifico">
                                         Thamarai Selvi
                                     </span>
                                 </span>
