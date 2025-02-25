@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { FolderGit2 } from 'lucide-react'
-import React from 'react'
 
 import ImageGallery from '../ui/image-gallery'
 import Meteors from '../ui/meteors'

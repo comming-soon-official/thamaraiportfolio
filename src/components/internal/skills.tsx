@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Brain, Code, Lightbulb, Palette, Pencil, Shapes } from 'lucide-react'
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 
 import Meteors from '../ui/meteors'
 
