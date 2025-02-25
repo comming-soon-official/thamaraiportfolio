@@ -50,6 +50,9 @@ export default {
                     4: 'hsl(var(--chart-4))',
                     5: 'hsl(var(--chart-5))'
                 }
+            },
+            animation: {
+                'float-slower': 'float 8s ease-in-out infinite' // Slower, more subtle floating
             }
         }
     },

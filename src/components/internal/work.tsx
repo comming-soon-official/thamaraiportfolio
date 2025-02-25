@@ -74,12 +74,12 @@ export default function WorkExperience() {
             </div>
 
             {/* Content */}
-            <div className="container mx-auto px-4 relative z-10">
+            <div className="container relative z-10 px-4 mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="max-w-2xl mx-auto text-center mb-20"
+                    className="max-w-2xl mx-auto mb-20 text-center"
                 >
                     <motion.div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-indigo-950/50 backdrop-blur-sm border border-indigo-500/30">
                         <Calendar className="w-4 h-4 text-indigo-400" />
@@ -87,7 +87,7 @@ export default function WorkExperience() {
                             Professional Journey
                         </span>
                     </motion.div>
-                    <h2 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white to-rose-300">
+                    <h2 className="mb-6 text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-white to-rose-300">
                         Work Experience
                     </h2>
                     <p className="text-lg text-white/60">
@@ -96,7 +96,56 @@ export default function WorkExperience() {
                     </p>
                 </motion.div>
 
-                <div className="max-w-7xl mx-auto space-y-40">
+                <div className="relative mx-auto space-y-40 max-w-7xl">
+                    {/* Timeline line */}
+                    <div className="absolute top-0 bottom-0 hidden w-px transform -translate-x-1/2 left-1/2 bg-gradient-to-b from-transparent via-indigo-500/50 to-transparent md:block">
+                        <div className="absolute w-full h-full animate-pulse bg-gradient-to-b from-transparent via-indigo-300/50 to-transparent"></div>
+                    </div>
+                    <div>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 0.3 }} // Reduced opacity
+                            className="absolute hidden lg:block -left-32 top-20 animate-float-slower" // Slower animation
+                        >
+                            <div className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-indigo-950/20 -rotate-6 backdrop-blur-md border border-indigo-500/10 text-indigo-400/70 shadow-[0_0_2rem_-1rem_#818CF8]">
+                                <Trophy className="w-4 h-4" />
+                                <span>Leadership</span>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 0.25 }}
+                            className="absolute hidden lg:block right-20 top-40 animate-float-slower"
+                        >
+                            <div className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-purple-950/20 rotate-6 backdrop-blur-md border border-purple-500/10 text-purple-400/70 shadow-[0_0_2rem_-1rem_#A855F7]">
+                                <Star className="w-4 h-4" />
+                                <span>Innovation</span>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 0.2 }}
+                            className="absolute hidden lg:block -right-24 top-96 animate-float-slower"
+                        >
+                            <div className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-blue-950/20 -rotate-3 backdrop-blur-md border border-blue-500/10 text-blue-400/70 shadow-[0_0_2rem_-1rem_#60A5FA]">
+                                <Users className="w-4 h-4" />
+                                <span>Teamwork</span>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 0.25 }}
+                            className="absolute hidden lg:block -left-20 bottom-40 animate-float-slower"
+                        >
+                            <div className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-rose-950/20 rotate-3 backdrop-blur-md border border-rose-500/10 text-rose-400/70 shadow-[0_0_2rem_-1rem_#FB7185]">
+                                <Building2 className="w-4 h-4" />
+                                <span>Growth</span>
+                            </div>
+                        </motion.div>
+                    </div>
                     {workExperience.map((experience, index) => (
                         <motion.div
                             key={experience.title}
@@ -104,10 +153,20 @@ export default function WorkExperience() {
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 0.8 }}
                             className={cn(
-                                'flex flex-col md:flex-row gap-16 items-start',
+                                'flex flex-col md:flex-row gap-16 items-start relative',
                                 index % 2 === 1 && 'md:flex-row-reverse'
                             )}
                         >
+                            {/* Timeline dot */}
+                            <motion.div
+                                initial={{ scale: 0 }}
+                                whileInView={{ scale: 1 }}
+                                transition={{ duration: 0.5 }}
+                                className="absolute top-14 hidden w-4 h-4 transform -translate-x-1/2 bg-indigo-500 rounded-full left-[49.4%] md:block"
+                            >
+                                <div className="absolute inset-0 bg-indigo-400 rounded-full animate-ping"></div>
+                            </motion.div>
+
                             {/* Timeline Side */}
                             <div className="flex-1 space-y-6">
                                 <motion.div
@@ -123,7 +182,7 @@ export default function WorkExperience() {
                                             {experience.period}
                                         </span>
                                     </div>
-                                    <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80 mb-2">
+                                    <h2 className="mb-2 text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-white/80">
                                         {experience.title}
                                     </h2>
                                     <div className="flex items-center gap-4 text-white/60">
@@ -152,7 +211,7 @@ export default function WorkExperience() {
                                                 delay: i * 0.2
                                             }}
                                             whileHover={{ scale: 1.02 }}
-                                            className="relative group rounded-2xl p-6 bg-indigo-950/20 hover:bg-indigo-950/30 backdrop-blur-sm border border-indigo-500/20"
+                                            className="relative p-6 border group rounded-2xl bg-indigo-950/20 hover:bg-indigo-950/30 backdrop-blur-sm border-indigo-500/20"
                                         >
                                             {/* Achievement Content */}
                                             <div className="flex items-start gap-6">
@@ -162,7 +221,7 @@ export default function WorkExperience() {
                                                             {achievement.title}
                                                         </h3>
                                                         {achievement.tag && (
-                                                            <span className="px-2 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-indigo-500/80 to-rose-500/80 text-white">
+                                                            <span className="px-2 py-1 text-xs font-medium text-white rounded-full bg-gradient-to-r from-indigo-500/80 to-rose-500/80">
                                                                 {
                                                                     achievement.tag
                                                                 }
@@ -176,7 +235,7 @@ export default function WorkExperience() {
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-rose-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                                            <div className="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none rounded-2xl bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-rose-500/10 group-hover:opacity-100" />
                                         </motion.div>
                                     )
                                 )}
